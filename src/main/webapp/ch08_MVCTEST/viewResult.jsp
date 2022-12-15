@@ -6,12 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-	<jsp:useBean id="calc" class="ch07.com.dao.GuGuDan" />
-	<jsp:setProperty property="num" name="calc" value="5"/>
 <body>
 
-	<h4>구구단 출력하기</h4>
-	<%= calc.calc() %>
-	
 </body>
 </html>

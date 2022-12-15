@@ -1,4 +1,4 @@
-<%@page import="java.lang.reflect.Method"%>
+<%@ page import="java.lang.reflect.Method"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%-- import 라이브러리를 가져옴 --%>
@@ -38,6 +38,7 @@
 	<ul>
 		<%for(String name : members) {%>
 			<li><%=name%></li>
+			<br />
 		<%} %>
 	</ul>
 	
@@ -45,6 +46,7 @@
 		<%for(String name : members) {
 			 out.println
 			 	("<li>"+ name + "</li>");
+			 out.println("<br>");
 		}
 		%>
 	</ul>

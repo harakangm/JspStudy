@@ -8,7 +8,7 @@ public class GuGuDan {
 		
 		for(int i = 1; i < 10; i++) {
 			
-			str.append("5*" + i + " = ").append(5*i).append("<br>");
+			str.append("5*" + i + " = ").append(num*i).append("<br>");
 		}
 		
 		return str.toString();		
@@ -23,5 +23,7 @@ public class GuGuDan {
 	}
 	
 
+	
+	
 	
 }
