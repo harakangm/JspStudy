@@ -59,6 +59,7 @@ public class ProductController extends HttpServlet {
 		Product p = service.find(request.getParameter("id"));
 		//리퀘스트 리스폰스 하는 과정에서 값을 가져다 쓸 수 있음
 		request.setAttribute("p", p);
+	//========================================================
 		return "productInfo.jsp";
 	}
 	

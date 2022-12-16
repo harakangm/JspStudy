@@ -1,11 +1,14 @@
 package ch08_MVCTEST;
 
+import java.util.List;
+
 public class Regist {
 	//이것은 데이터베이스에서 값을 받아서 저장할곳
 	private String id;
 	private String name;
 	private String address;
 	private String grade;
+	private String gradeko;
 	private String phone;
 	
 	Regist(String id,String name,String address,String grade,String phone) {
@@ -14,7 +17,29 @@ public class Regist {
 		this.address = address;
 		this.grade = grade;
 		this.phone = phone;
+		
+		switch (grade) {
+		case "silver":
+			 this.gradeko = "silver(일반)";
+		break;
+		case "gold":
+			this.gradeko = "gold(중간)";
+		break;
+		case "vip":
+			this.gradeko = "vip(최상)";
+		break;	
+		}
 	}
+
+
+	public Regist(Regist reg) {
+		this.id = reg.id;
+		this.name = reg.name;
+		this.address = reg.address;
+		this.grade = reg.gradeko;
+		this.phone = reg.phone;
+	}
+
 
 	public String getId() {
 		return id;
@@ -55,6 +80,15 @@ public class Regist {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
+	public String getGradeko() {
+		return gradeko;
+	}
+
+	public void setGradeko(String gradeko) {
+		this.gradeko = gradeko;
+	}
+	
 	
 	
 }

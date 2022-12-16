@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,14 +16,17 @@
 			<th>이름</th>
 			<th>전화번호</th>
 		</tr>
-		<c:forEach var="i" varStatus="e" items= "${attri}">
+		<c:forEach var="i" varStatus="e" items= "${reg}">
 			<tr>
 				<th>${e.count}</th>
-				<th href="/jsp_study/recon?action=info">${attri.name}</th>
-				<th>${attri.phone}</th>
+				<th><a href="/jsp_study/rcon?action=info&id=${i.id}">${i.name}</a></th>
+				<th>${i.phone}</th>
+				<th>${i.grade}</th> 
 			</tr>
 		</c:forEach>
 	</table>
-
+	
+	<a href="/jsp_study/rcon?action=list2">등급확인</a>
+	<a href="/jsp_study/rcon?action=list">되돌아가기</a>
 </body>
 </html>
